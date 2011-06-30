@@ -282,7 +282,7 @@ AC_DEFINE_UNQUOTED([COPYRIGHT],
         [copyright info])
 
 # git information
-AC_DEFINE([GIT_COMMIT], "esyscmd(git show | head -n 1 | sed 's/commit //' |  grep -o -e '.\{8\}' | head -n 1 |tr -d '\n')", [git HEAD commit hash])
+AC_DEFINE([GIT_COMMIT], "fakegitcommitvalue", [git HEAD commit hash])
 AC_DEFINE([GIT_COMMIT_DATE], "esyscmd(git log -1 | head -n 3 | grep 'Date:' | sed s/'Date:   '// | tr -d '\n')", [git HEAD commit date])
 
 # GCC version
